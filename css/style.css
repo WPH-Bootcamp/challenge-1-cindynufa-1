@@ -1,31 +1,148 @@
+/* Design System */
 :root {
+  /* Colour */
+  --colour-primary: #d98ca0;
+  --colour-primary-light: #ebb8c5;
+  --colour-primary-pale: #f7e4ea;
+  --colour-primary-soft: #fdf0f3;
 
+  --colour-accent-lavender: #c4b5d9;
+  --colour-accent-sage: #a8c4b0;
+  --colour-accent-peach: #f0c4a8;
+  --colour-accent-sky: #a8c4d9;
+
+  --colour-bg: #fdfaf8;
+  --colour-surface-tint: #fbf6f8;
+  --colour-surface-muted: #f5eff2;
+
+  --colour-text-primary: #3d2b35;
+  --colour-text-secondary: #7a5f6a;
+  --colour-text-muted: #b09aa5;
+  --colour-text-light: #d4c0c8;
+
+  --colour-border: #eae0e4;
+
+  /* Font */
+  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-full: 9999px;
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+  font-size: 1rem;
 }
 
 body {
-
+  background-color: var(--colour-bg);
+  color: var(--colour-primary);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.75;
 }
 
-header {
+a {
+  text-decoration: none;
+}
 
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  display: inline-block;
+  background: none;
+  border: none;
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/* Classes */
+header {
+  position: fixed;
+  z-index: 50;
+  padding: 1.25rem 2rem;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 nav {
-
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav:hover {
-
+.nav-logo {
+  color: var(--colour-text-primary);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 900;
 }
 
-.button.nav {
-    
+.nav-logo span {
+  color: var(--colour-primary);
 }
 
-.button-hamburger {
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
 
+.nav-ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.nav-ul a {
+  position: relative;
+  color: var(--colour-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.nav-ul a:hover {
+  color: var(--colour-primary);
+}
+
+.nav-button {
+  background: var(--colour-primary-soft);
+  color: var(--colour-primary);
+  font-size: 0.82rem;
+  border: 0.2rem solid var(--colour-primary-pale);
+  border-radius: var(--radius-full);
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background: var(--colour-primary-pale);
+  border-color: var(--colour-primary-light);
+}
+
+.nav-hamburger {
+  display: none;
+  cursor: pointer;
+  gap: 0.313rem;
+  padding: 0.25rem;
 }
 
 footer {
-
 }
